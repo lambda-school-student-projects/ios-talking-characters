@@ -1,4 +1,4 @@
-# Supplemental Module Challenge: Table View Controllers - Detailed
+# Supplemental Module Challenge: Table View Controllers - Talking Characters
 
 This challenge allows you to practice some of the concepts and techniques learned in this weeks guided lesson (as well as a few that weren't) and apply them in a concrete project. You've explored table view controllers, custom cells, segues, and detail controllers. You can demonstrate proficiency by creating an application that showcases the same features you learned in class.
 
