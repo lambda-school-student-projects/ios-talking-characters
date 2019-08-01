@@ -6,11 +6,11 @@ This challenge allows you to practice some of the concepts and techniques learne
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Challenge.**
 
-This is an individual assessment but you are permitted to consult with and support other members of your cohort. You are encouraged to follow the twenty-minute rule and seek support from your PM and Instructor in your cohort help channel on Slack. 
+This is an individual assessment but you are permitted to consult with and support other members of your cohort. You are encouraged to follow the twenty-minute rule and seek support from your TL and SL in your cohort help channel on Slack. 
 
 ## Commits
 
-Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons) and your project manager.
+Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons) and your Team Lead.
 
 ## Description
 
