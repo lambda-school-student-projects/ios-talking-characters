@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var characterLabel: UILabel!
     @IBOutlet weak var characterImageView: UIImageView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
+
     var character: Model.Animation?
 
     var cells: [UIImage] = []
@@ -23,12 +23,6 @@ class DetailViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        animateCharacter(at: 10)
-        
-    }
-    
-    func animateCharacter(at duration: Double) {
         // character name
         guard let character = character else { return }
         characterLabel.text = character.rawValue
@@ -36,6 +30,11 @@ class DetailViewController: UIViewController {
         cells = Model.shared.cells(for: character)
         characterImageView.animationImages = cells
         characterImageView.animationRepeatCount = 0
+        animateCharacter(at: 10)
+        
+    }
+    
+    func animateCharacter(at duration: Double) {
         characterImageView.animationDuration = TimeInterval(cells.count / Int(duration))
         characterImageView.startAnimating()
     }
@@ -54,14 +53,25 @@ class DetailViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
+    @IBAction func `switch`(_ sender: UISwitch) {
+        
+        if (sender.isOn == true)
+        {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            characterImageView.startAnimating()
+            
+        } else {
+
+            guard let character = character else { return }
+            characterLabel.text = character.rawValue
+            let staticImage = Model.shared.image(for: character)
+            characterImageView.image = staticImage
+            characterImageView.stopAnimating()
+        }
     }
-    */
-
+    
+    @IBAction func shareButton(_ sender: UIButton) {
+        let activityController = UIActivityViewController(activityItems: [cells], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+    }
 }

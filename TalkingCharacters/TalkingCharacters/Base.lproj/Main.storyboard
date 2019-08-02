@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Talking Characters-->
         <scene sceneID="Zdx-Ph-hYn">
             <objects>
                 <tableViewController id="k6h-ZC-SU7" customClass="TableViewController" customModule="TalkingCharacters" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,7 +52,7 @@
                             <outlet property="delegate" destination="k6h-ZC-SU7" id="9Hz-G2-eQB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Q48-tQ-1Qd"/>
+                    <navigationItem key="navigationItem" title="Talking Characters" id="Q48-tQ-1Qd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0R-1H-dzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,13 +91,30 @@
                                     <action selector="indexChanged:" destination="yVd-Q5-lRE" eventType="valueChanged" id="r3D-xL-M6b"/>
                                 </connections>
                             </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Mp-YB-74d">
+                                <rect key="frame" x="182.5" y="537" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switch:" destination="yVd-Q5-lRE" eventType="valueChanged" id="0jT-GR-IiL"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf5-bn-oi6">
+                                <rect key="frame" x="134.5" y="792" width="145" height="30"/>
+                                <state key="normal" title="Share this Character!"/>
+                                <connections>
+                                    <action selector="shareButton:" destination="yVd-Q5-lRE" eventType="touchUpInside" id="Fy9-6A-IWt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="3Mp-YB-74d" firstAttribute="top" secondItem="XE9-fP-7zP" secondAttribute="bottom" constant="45" id="0H8-2I-rjY"/>
                             <constraint firstItem="XE9-fP-7zP" firstAttribute="centerX" secondItem="uCy-UE-SCM" secondAttribute="centerX" id="6M1-0v-GkN"/>
                             <constraint firstItem="xvf-tf-2Xy" firstAttribute="centerX" secondItem="uCy-UE-SCM" secondAttribute="centerX" id="AV9-EK-zfu"/>
+                            <constraint firstItem="3Mp-YB-74d" firstAttribute="centerX" secondItem="XE9-fP-7zP" secondAttribute="centerX" id="Dge-kc-YYa"/>
                             <constraint firstItem="xvf-tf-2Xy" firstAttribute="top" secondItem="hwx-7g-lIP" secondAttribute="bottom" constant="40" id="Jvf-Sd-gml"/>
+                            <constraint firstItem="cf5-bn-oi6" firstAttribute="centerX" secondItem="uCy-UE-SCM" secondAttribute="centerX" id="RSr-Mg-nF0"/>
                             <constraint firstItem="hwx-7g-lIP" firstAttribute="centerX" secondItem="uCy-UE-SCM" secondAttribute="centerX" id="Rf9-0g-FOT"/>
+                            <constraint firstItem="ANM-4Q-i36" firstAttribute="bottom" secondItem="cf5-bn-oi6" secondAttribute="bottom" constant="40" id="TvO-nI-Ppd"/>
                             <constraint firstItem="hwx-7g-lIP" firstAttribute="top" secondItem="ANM-4Q-i36" secondAttribute="top" constant="40" id="bMh-GP-8pm"/>
                             <constraint firstItem="hwx-7g-lIP" firstAttribute="centerX" secondItem="XE9-fP-7zP" secondAttribute="centerX" id="ehl-Ub-mAd"/>
                             <constraint firstItem="XE9-fP-7zP" firstAttribute="top" secondItem="xvf-tf-2Xy" secondAttribute="bottom" constant="60" id="no0-4h-xx5"/>
@@ -112,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6S-Q4-AEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104" y="113"/>
+            <point key="canvasLocation" x="1102.8985507246377" y="112.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aMQ-0E-ugn">
