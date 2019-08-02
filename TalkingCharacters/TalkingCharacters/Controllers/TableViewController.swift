@@ -31,7 +31,7 @@ class TableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetailSegue" {
             if let indexPath = tableView.indexPathForSelectedRow, let destinationVC = segue.destination as? DetailViewController {
-                destinationVC.character = Model.Animation.allCases[indexPath.row]
+                destinationVC.character = Model.shared.characters[indexPath.row]
             }
         }
     }
