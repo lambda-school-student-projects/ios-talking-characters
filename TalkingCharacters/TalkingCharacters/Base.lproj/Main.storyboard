@@ -77,25 +77,40 @@
                                     <constraint firstAttribute="width" constant="250" id="CQn-dl-iCk"/>
                                 </constraints>
                             </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pM4-rM-wae">
+                                <rect key="frame" x="82" y="213" width="250" height="29"/>
+                                <segments>
+                                    <segment title="10fps"/>
+                                    <segment title="15fps"/>
+                                    <segment title="30fps"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="0Uo-J4-NM4" eventType="valueChanged" id="hkk-ps-Naj"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0wr-Ak-BoD" firstAttribute="centerX" secondItem="Aax-mB-AaC" secondAttribute="centerX" id="5fT-5w-PHY"/>
                             <constraint firstItem="BcS-Uc-KrA" firstAttribute="trailing" secondItem="p1H-uf-38B" secondAttribute="trailing" constant="20" id="Vex-4T-kmt"/>
+                            <constraint firstItem="pM4-rM-wae" firstAttribute="top" secondItem="p1H-uf-38B" secondAttribute="bottom" constant="59" id="aqQ-sN-1Qf"/>
+                            <constraint firstItem="pM4-rM-wae" firstAttribute="leading" secondItem="0wr-Ak-BoD" secondAttribute="leading" id="arx-BE-W3i"/>
                             <constraint firstItem="p1H-uf-38B" firstAttribute="leading" secondItem="BcS-Uc-KrA" secondAttribute="leading" constant="20" id="hcm-Q8-mks"/>
                             <constraint firstItem="0wr-Ak-BoD" firstAttribute="centerY" secondItem="Aax-mB-AaC" secondAttribute="centerY" id="k1Z-EG-ySb"/>
                             <constraint firstItem="p1H-uf-38B" firstAttribute="top" secondItem="BcS-Uc-KrA" secondAttribute="top" constant="30" id="lve-Le-hgZ"/>
+                            <constraint firstItem="pM4-rM-wae" firstAttribute="width" secondItem="0wr-Ak-BoD" secondAttribute="width" id="xLk-nv-aqi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BcS-Uc-KrA"/>
                     </view>
                     <connections>
                         <outlet property="characterImage" destination="0wr-Ak-BoD" id="Zbf-3O-jLj"/>
                         <outlet property="characterNameLabel" destination="p1H-uf-38B" id="9MY-0E-6SX"/>
+                        <outlet property="segmentedControl" destination="pM4-rM-wae" id="tzj-1A-Bsa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKP-NP-3xe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="157"/>
+            <point key="canvasLocation" x="1147.8260869565217" y="156.69642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="trz-nc-kPf">
