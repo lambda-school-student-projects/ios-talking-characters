@@ -13,11 +13,17 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblCharacterName: UILabel!
     @IBOutlet weak var imgCharacter: UIImageView!
     
+    var character: Model.Animation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        guard let character = character else { return }
+        lblCharacterName.text = character.rawValue
     }
     
 
