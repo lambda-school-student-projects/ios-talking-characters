@@ -13,6 +13,8 @@ class DetailViewController: UIViewController {
     @IBOutlet var characterNameLabel: UILabel!
     @IBOutlet var characterImage: UIImageView!
     @IBOutlet var segmentedControl: UISegmentedControl!
+    var playBtn = UIBarButtonItem()
+    var pauseBtn = UIBarButtonItem()
     
     var character: Model.Animation?
 
@@ -20,8 +22,25 @@ class DetailViewController: UIViewController {
         runAnimation()
     }
     
-    @IBAction func indexChanged(_ sender: Any) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        playBtn = UIBarButtonItem(barButtonSystemItem: .play , target: self, action: #selector(playBtnAction(sender:)))
+        pauseBtn = UIBarButtonItem(barButtonSystemItem: .pause , target: self, action: #selector(pauseBtnAction(sender:)))
+        navigationItem.rightBarButtonItem = pauseBtn
+    }
+    
+    @objc func playBtnAction(sender: UIBarButtonItem) {
+        navigationItem.rightBarButtonItem = pauseBtn
+        runAnimation()
+    }
+    
+    @objc func pauseBtnAction(sender: UIBarButtonItem) {
+        self.navigationItem.rightBarButtonItem = playBtn
+        characterImage.stopAnimating()
+    }
+    
+    @IBAction func indexChanged(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             runAnimation()
@@ -32,7 +51,6 @@ class DetailViewController: UIViewController {
         default:
             runAnimation()
         }
-        
     }
     
     func runAnimation() {
