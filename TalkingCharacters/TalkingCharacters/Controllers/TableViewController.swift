@@ -9,27 +9,17 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print(Model.shared.characters)
-        print(Model.shared.characters.count)
-    }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Model.shared.characters.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterCell", for: indexPath) as? TableViewCell else { return UITableViewCell() }
         
         let model = Model.shared.characters[indexPath.row]
-//        let result = Model.shared.image(for: model)
         cell.character = model
 
         return cell

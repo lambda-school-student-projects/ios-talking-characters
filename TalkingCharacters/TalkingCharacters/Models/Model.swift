@@ -58,9 +58,6 @@ class Model {
                 }
             }
         }
-        
-        print(cellCounts[character])
-        
         return imageArray
     }
 }

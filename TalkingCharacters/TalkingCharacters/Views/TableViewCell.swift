@@ -23,7 +23,6 @@ class TableViewCell: UITableViewCell {
             print(character)
             let result = Model.shared.image(for: character)
             characterImage.image = result
-            print(characterImage.image)
         }
     }
 

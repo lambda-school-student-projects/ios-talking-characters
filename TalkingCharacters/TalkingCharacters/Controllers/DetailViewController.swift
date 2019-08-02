@@ -25,13 +25,4 @@ class DetailViewController: UIViewController {
         characterImage.animationDuration = 4.0
         characterImage.startAnimating()
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    
-
 }
