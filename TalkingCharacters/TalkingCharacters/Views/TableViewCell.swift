@@ -9,16 +9,22 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet var characterImage: UIImageView!
+    
+    var character: Model.Animation? {
+        didSet {
+            updateViews()
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    private func updateViews() {
+        if let character = character {
+            print(character)
+            let result = Model.shared.image(for: character)
+            characterImage.image = result
+            print(characterImage.image)
+        }
     }
 
 }

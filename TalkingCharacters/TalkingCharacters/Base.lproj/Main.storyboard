@@ -40,6 +40,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="characterImage" destination="KTb-rh-TzY" id="WyI-4q-fOt"/>
                                     <segue destination="0Uo-J4-NM4" kind="show" identifier="ShowDetailSegue" id="L6m-kX-gEy"/>
                                 </connections>
                             </tableViewCell>
@@ -87,6 +88,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BcS-Uc-KrA"/>
                     </view>
+                    <connections>
+                        <outlet property="characterImage" destination="0wr-Ak-BoD" id="Zbf-3O-jLj"/>
+                        <outlet property="characterNameLabel" destination="p1H-uf-38B" id="9MY-0E-6SX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKP-NP-3xe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
