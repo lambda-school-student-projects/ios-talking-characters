@@ -20,7 +20,6 @@ class TableViewCell: UITableViewCell {
 
     private func updateViews() {
         if let character = character {
-            print(character)
             let result = Model.shared.image(for: character)
             characterImage.image = result
         }
