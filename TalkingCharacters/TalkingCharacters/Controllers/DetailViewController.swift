@@ -25,6 +25,9 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        guard let character = character else { return }
+        characterImage.image = Model.shared.image(for: character)
+        
         playBtn = UIBarButtonItem(barButtonSystemItem: .play , target: self, action: #selector(playBtnAction(sender:)))
         pauseBtn = UIBarButtonItem(barButtonSystemItem: .pause , target: self, action: #selector(pauseBtnAction(sender:)))
         navigationItem.rightBarButtonItem = pauseBtn
@@ -43,13 +46,21 @@ class DetailViewController: UIViewController {
     @IBAction func indexChanged(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            runAnimation()
+            if navigationItem.rightBarButtonItem == pauseBtn {
+                runAnimation()
+            }
         case 1:
-            runAnimation()
+            if navigationItem.rightBarButtonItem == pauseBtn {
+                runAnimation()
+            }
         case 2:
-            runAnimation()
+            if navigationItem.rightBarButtonItem == pauseBtn {
+                runAnimation()
+            }
         default:
-            runAnimation()
+            if navigationItem.rightBarButtonItem == pauseBtn {
+                runAnimation()
+            }
         }
     }
     
