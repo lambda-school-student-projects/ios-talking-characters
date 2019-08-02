@@ -22,7 +22,7 @@ class DetailViewController: UIViewController {
         let cells = Model.shared.cells(for: character)
         characterImage.animationImages = cells
         characterImage.animationRepeatCount = 0
-        characterImage.animationDuration = 2.0
+        characterImage.animationDuration = 4.0
         characterImage.startAnimating()
     }
     
