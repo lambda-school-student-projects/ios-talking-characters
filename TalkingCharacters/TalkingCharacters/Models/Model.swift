@@ -18,7 +18,9 @@ extension Int {
 
 class Model {
     static let shared = Model()
+    
     private init() {}
+    
     enum Animation: String, CaseIterable {
         case bureaucrat = "Talking Bureaucrat"
         case frog = "Talking Frog"
@@ -34,7 +36,8 @@ class Model {
     }
     
     func image(for character: Animation) -> UIImage {
-        return UIImage(named: character.rawValue + "000") ?? UIImage()
+        guard let image = UIImage(named: character.rawValue + "000") else { return UIImage() } 
+        return image
     }
     
     func cells(for character: Animation) -> [UIImage] {
@@ -42,13 +45,13 @@ class Model {
         
         guard let numberOfImages = cellCounts[character] else { return [] }
         
-        for number in 0...numberOfImages {
+        for number in 0..<numberOfImages {
             // getting the image number
             let imageNumber = number.stringPadded(to: 3)
             
             // getting the character name
             let characterName = character.rawValue + imageNumber
-            guard let image = UIImage(named: characterName) else { return [] }
+            guard let image = UIImage(named: characterName) else { break }
             
             // add to images array
             images.append(image)

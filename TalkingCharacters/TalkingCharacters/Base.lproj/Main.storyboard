@@ -22,26 +22,28 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CharacterCell" rowHeight="120" id="i0d-ZX-ekc" customClass="TableViewCell" customModule="TalkingCharacters" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i0d-ZX-ekc" id="Njv-ie-fJo">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i0d-ZX-ekc" id="Njv-ie-fJo">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ruB-7D-bzX">
-                                            <rect key="frame" x="157" y="10.5" width="100" height="98.5"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruB-7D-bzX">
+                                            <rect key="frame" x="157" y="11.5" width="100" height="100"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="3BP-QJ-62M"/>
+                                                <constraint firstAttribute="height" constant="100" id="3bm-V9-XOH"/>
+                                                <constraint firstAttribute="width" constant="100" id="9GI-CF-20g"/>
+                                                <constraint firstAttribute="width" secondItem="ruB-7D-bzX" secondAttribute="height" multiplier="1:1" id="q17-HS-wyM"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ruB-7D-bzX" firstAttribute="centerX" secondItem="Njv-ie-fJo" secondAttribute="centerX" id="0Xf-2p-xYt"/>
-                                        <constraint firstItem="ruB-7D-bzX" firstAttribute="bottom" secondItem="Njv-ie-fJo" secondAttribute="bottomMargin" id="mbr-I2-J9O"/>
-                                        <constraint firstItem="ruB-7D-bzX" firstAttribute="centerY" secondItem="Njv-ie-fJo" secondAttribute="centerY" id="ycV-0u-Goj"/>
+                                        <constraint firstItem="ruB-7D-bzX" firstAttribute="centerX" secondItem="Njv-ie-fJo" secondAttribute="centerX" id="1tP-nG-O1u"/>
+                                        <constraint firstItem="ruB-7D-bzX" firstAttribute="top" secondItem="Njv-ie-fJo" secondAttribute="topMargin" id="Ic7-F8-Mie"/>
+                                        <constraint firstItem="ruB-7D-bzX" firstAttribute="centerY" secondItem="Njv-ie-fJo" secondAttribute="centerY" id="MXt-up-tys"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="characterImageView" destination="ruB-7D-bzX" id="BIj-sb-5JS"/>
-                                    <segue destination="yVd-Q5-lRE" kind="show" id="0zt-FK-rNt"/>
+                                    <segue destination="yVd-Q5-lRE" kind="show" identifier="ShowCharacter" id="0zt-FK-rNt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -65,25 +67,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-tf-2Xy">
-                                <rect key="frame" x="171.5" y="174" width="71" height="36"/>
+                                <rect key="frame" x="171.5" y="128" width="71" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XE9-fP-7zP">
-                                <rect key="frame" x="69" y="310" width="276" height="276"/>
+                                <rect key="frame" x="107" y="224" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XE9-fP-7zP" secondAttribute="height" multiplier="1:1" id="5pB-jh-mCw"/>
+                                    <constraint firstAttribute="height" constant="200" id="SK8-XS-8UU"/>
+                                    <constraint firstAttribute="width" constant="200" id="VuJ-gJ-8d2"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XE9-fP-7zP" firstAttribute="centerY" secondItem="uCy-UE-SCM" secondAttribute="centerY" id="49I-j5-sbu"/>
-                            <constraint firstItem="XE9-fP-7zP" firstAttribute="top" secondItem="xvf-tf-2Xy" secondAttribute="bottom" constant="100" id="4Jx-Y4-MYE"/>
-                            <constraint firstItem="xvf-tf-2Xy" firstAttribute="centerX" secondItem="uCy-UE-SCM" secondAttribute="centerX" id="Bsh-1V-dYf"/>
-                            <constraint firstItem="xvf-tf-2Xy" firstAttribute="top" secondItem="ANM-4Q-i36" secondAttribute="top" constant="86" id="Do7-gF-dYP"/>
-                            <constraint firstItem="XE9-fP-7zP" firstAttribute="centerX" secondItem="uCy-UE-SCM" secondAttribute="centerX" id="yoU-wS-PBX"/>
+                            <constraint firstItem="XE9-fP-7zP" firstAttribute="centerX" secondItem="uCy-UE-SCM" secondAttribute="centerX" id="6M1-0v-GkN"/>
+                            <constraint firstItem="xvf-tf-2Xy" firstAttribute="centerX" secondItem="uCy-UE-SCM" secondAttribute="centerX" id="AV9-EK-zfu"/>
+                            <constraint firstItem="xvf-tf-2Xy" firstAttribute="top" secondItem="ANM-4Q-i36" secondAttribute="top" constant="40" id="Kdy-gg-GfC"/>
+                            <constraint firstItem="XE9-fP-7zP" firstAttribute="top" secondItem="xvf-tf-2Xy" secondAttribute="bottom" constant="60" id="no0-4h-xx5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ANM-4Q-i36"/>
                     </view>
