@@ -1,0 +1,16 @@
+1. What is a detail view controller?
+	A detail view controller is a view controller a user navigates to from a table view or collection view. The detail view presents more information than what a user can see on the table view or collection view.
+
+2. What does a segue do? How do you use it and where?
+	A segue is an object that prepares for and performs the visual transition between two view controllers. You use the segue to transition from one screen to the next and is commonly used from table view cells or buttons.
+
+3. What are other ways your detail view controller could get its information? Why use segues?
+	The detail view controller could also get its information from a protocol-delegate relationship, however, using a segue makes it easier to just pass properties from the main screen to the detail screen without needing to create custom protocols and adhere to them in the detail view.
+
+4. Why must you conditionally cast custom cell types when using them with table views? How do you do this?
+	You must conditionally cast custom cell types when using them with table views because there is a possibility the cell type does not exist. If that is the case and you force downcast, the app will crash if the custom type does not exist. You can do this with a statement like:
+	guard let cell = tableView.dequeueReusableCell(withIdentifier: [NAME OF CELL IDENTIFIER], for: indexPath) as? [NAME OF TABLEVIEWCELL] else { return UITableViewCell() }
+
+5. Why must you conditionally cast detail view controller types when using them with segues? How do you do this?
+	Similarly to casting custom cell types, you must conditionally cast detail view controller types because that view controller might not exist and if that is the case the app will crash if it tries to navigate to the detail view controller. You can create this downcast like:
+	if let destinationVC = segue.destination as? [NAME OF VIEWCONTROLLER]
