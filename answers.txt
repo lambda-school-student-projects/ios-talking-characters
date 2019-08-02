@@ -1,0 +1,20 @@
+Q: What is a detail view controller?
+A: A detail view controller is a screen and code file that handles displaying the details of something selected by the user on the previous screen. This is often selected from a table view. The detail view displays information related to the selected item in a way that is helpful for the user.
+
+Q: What does a segue do? How do you use it and where?
+A: Segues connect view controllers to each other by defining a trigger (usually a tap on some significant on-screen object by the user) and the view controller that logically follows that selection. Segues are given identification strings that are passed to the initial view controller via the prepare(for segue:sender:) method, which can then act upon the impending segue by preparing data or other parameters for the next (destination) view controller.
+
+Q: What are other ways your detail view controller could get its information? Why use segues?
+A: Segues are commonly used and have well-established use patterns. They are designed to facilitate passing data from one view controller to another. There are probably innumerable other ways that you could send the information, like some sort of service, and external API, using delegates, etc.
+
+Q: Why must you conditionally cast custom cell types when using them with table views? How do you do this?
+A: If you don't conditionally cast the custom cell type, the compiler will not know about the custom features you've included in it, such as the outlets to any labels, images, etc. that you've added to the cell prototype. You perform the conditional cast in a `guard let` statement when you call the dequeueReusableCell(withIdentifier: for:) method.
+
+Example from my code:
+guard let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as? TableViewCell else { return UITableViewCell() }
+
+Q: Why must you conditionally cast detail view controller types when using them with segues? How do you do this?
+A: This is basically the same answer as above. Without casting to the specific type of view controller you're using, the compiler won't know how to access the properties on that view controller to pass data to it.
+
+Example from my code, in the prepare)for segue: sender:) method:
+guard let vc = segue.destination as? DetailViewController, let indexPath = tableView.indexPathForSelectedRow else { return }

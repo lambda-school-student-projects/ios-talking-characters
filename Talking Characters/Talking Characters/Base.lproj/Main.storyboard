@@ -26,7 +26,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DiE-5j-agL">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DiE-5j-agL">
                                             <rect key="frame" x="157" y="10" width="100" height="100"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="Pqd-wB-DfI"/>
@@ -41,7 +41,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imgCellCharacter" destination="DiE-5j-agL" id="60Y-ot-kDb"/>
-                                    <segue destination="avo-2b-I9T" kind="show" id="Osk-rS-CQL"/>
+                                    <segue destination="avo-2b-I9T" kind="show" identifier="SegueShowDetailView" id="Osk-rS-CQL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
