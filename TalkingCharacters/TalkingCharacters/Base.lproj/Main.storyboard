@@ -66,26 +66,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-tf-2Xy">
-                                <rect key="frame" x="171.5" y="128" width="71" height="36"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XE9-fP-7zP">
-                                <rect key="frame" x="107" y="224" width="200" height="200"/>
+                                <rect key="frame" x="107" y="292" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XE9-fP-7zP" secondAttribute="height" multiplier="1:1" id="5pB-jh-mCw"/>
                                     <constraint firstAttribute="height" constant="200" id="SK8-XS-8UU"/>
                                     <constraint firstAttribute="width" constant="200" id="VuJ-gJ-8d2"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvf-tf-2Xy">
+                                <rect key="frame" x="171.5" y="196" width="71" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hwx-7g-lIP">
+                                <rect key="frame" x="129.5" y="128" width="155" height="29"/>
+                                <segments>
+                                    <segment title="10 fps"/>
+                                    <segment title="15fps"/>
+                                    <segment title="30fps"/>
+                                </segments>
+                                <connections>
+                                    <action selector="indexChanged:" destination="yVd-Q5-lRE" eventType="valueChanged" id="r3D-xL-M6b"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="XE9-fP-7zP" firstAttribute="centerX" secondItem="uCy-UE-SCM" secondAttribute="centerX" id="6M1-0v-GkN"/>
                             <constraint firstItem="xvf-tf-2Xy" firstAttribute="centerX" secondItem="uCy-UE-SCM" secondAttribute="centerX" id="AV9-EK-zfu"/>
-                            <constraint firstItem="xvf-tf-2Xy" firstAttribute="top" secondItem="ANM-4Q-i36" secondAttribute="top" constant="40" id="Kdy-gg-GfC"/>
+                            <constraint firstItem="xvf-tf-2Xy" firstAttribute="top" secondItem="hwx-7g-lIP" secondAttribute="bottom" constant="40" id="Jvf-Sd-gml"/>
+                            <constraint firstItem="hwx-7g-lIP" firstAttribute="centerX" secondItem="uCy-UE-SCM" secondAttribute="centerX" id="Rf9-0g-FOT"/>
+                            <constraint firstItem="hwx-7g-lIP" firstAttribute="top" secondItem="ANM-4Q-i36" secondAttribute="top" constant="40" id="bMh-GP-8pm"/>
+                            <constraint firstItem="hwx-7g-lIP" firstAttribute="centerX" secondItem="XE9-fP-7zP" secondAttribute="centerX" id="ehl-Ub-mAd"/>
                             <constraint firstItem="XE9-fP-7zP" firstAttribute="top" secondItem="xvf-tf-2Xy" secondAttribute="bottom" constant="60" id="no0-4h-xx5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ANM-4Q-i36"/>
@@ -93,6 +107,7 @@
                     <connections>
                         <outlet property="characterImageView" destination="XE9-fP-7zP" id="tjA-1L-5f0"/>
                         <outlet property="characterLabel" destination="xvf-tf-2Xy" id="zIX-sO-Nj9"/>
+                        <outlet property="segmentedControl" destination="hwx-7g-lIP" id="QqF-pi-NW5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x6S-Q4-AEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
