@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ms1-ne-Kv3">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="IGF-of-RKS">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="25G-DZ-kD8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="5A8-x2-hjX" customClass="SkeletonTableViewController" customModule="Talking_Characters_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nzT-Bj-Wnb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SkeletonCell" id="pkf-Kb-1bH" customClass="SkeletonTableViewCell" customModule="Talking_Characters_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pkf-Kb-1bH" id="S4R-fD-ojH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sRK-jN-DcG">
+                                            <rect key="frame" x="157" y="9" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="characterImage" destination="sRK-jN-DcG" id="WC8-Yp-GXD"/>
+                                    <segue destination="evI-Sk-DGb" kind="show" identifier="ShowDetailSegue" id="ihA-Ll-tOc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5A8-x2-hjX" id="QfA-d3-XyV"/>
+                            <outlet property="delegate" destination="5A8-x2-hjX" id="tC9-9J-vb7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="ns9-If-hGR"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="370" y="-8"/>
+        </scene>
+        <!--Skeleton View Controller-->
+        <scene sceneID="I9R-Bq-Ax8">
+            <objects>
+                <viewController id="evI-Sk-DGb" customClass="SkeletonViewController" customModule="Talking_Characters_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bzQ-zE-4cx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="thj-Mv-dfk">
+                                <rect key="frame" x="32" y="376" width="350" height="486"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xa6-VN-8sz">
+                                <rect key="frame" x="20" y="214" width="362" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="4VI-Rp-CCe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xa6-VN-8sz" firstAttribute="trailing" secondItem="thj-Mv-dfk" secondAttribute="trailing" id="3dg-UF-71L"/>
+                            <constraint firstItem="thj-Mv-dfk" firstAttribute="leading" secondItem="FKn-Qv-zSi" secondAttribute="leading" constant="32" id="43C-8H-5fs"/>
+                            <constraint firstItem="thj-Mv-dfk" firstAttribute="top" secondItem="xa6-VN-8sz" secondAttribute="bottom" constant="53" id="HBb-ZJ-OyN"/>
+                            <constraint firstItem="xa6-VN-8sz" firstAttribute="top" secondItem="FKn-Qv-zSi" secondAttribute="top" constant="126" id="ZFU-3m-KQH"/>
+                            <constraint firstItem="thj-Mv-dfk" firstAttribute="bottom" secondItem="FKn-Qv-zSi" secondAttribute="bottom" id="d5N-XG-km7"/>
+                            <constraint firstItem="xa6-VN-8sz" firstAttribute="leading" secondItem="bzQ-zE-4cx" secondAttribute="leadingMargin" id="eYs-sP-ij5"/>
+                            <constraint firstItem="thj-Mv-dfk" firstAttribute="centerX" secondItem="bzQ-zE-4cx" secondAttribute="centerX" id="n7M-dd-Edx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FKn-Qv-zSi"/>
+                    </view>
+                    <connections>
+                        <outlet property="animatedCharacter" destination="thj-Mv-dfk" id="yrO-xx-98C"/>
+                        <outlet property="characterNameLabel" destination="xa6-VN-8sz" id="PA8-ev-yVH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ya-LF-Lfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198.5507246376812" y="-8.0357142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9uT-g1-Eto">
+            <objects>
+                <navigationController id="Ms1-ne-Kv3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dgm-Sp-tLL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5A8-x2-hjX" kind="relationship" relationship="rootViewController" id="Yp5-hq-8oU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PMe-fM-PxS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-548" y="-8"/>
+        </scene>
+    </scenes>
+</document>
