@@ -73,13 +73,13 @@ class DetailViewController: UIViewController {
         
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            characterImage.animationDuration = Double(Model.shared.cells(for: character).count) / 10.0
+            characterImage.animationDuration = Double(cells.count) / 10.0
         case 1:
-            characterImage.animationDuration = Double(Model.shared.cells(for: character).count) / 15.0
+            characterImage.animationDuration = Double(cells.count) / 15.0
         case 2:
-            characterImage.animationDuration = Double(Model.shared.cells(for: character).count) / 30.0
+            characterImage.animationDuration = Double(cells.count) / 30.0
         default:
-            characterImage.animationDuration = Double(Model.shared.cells(for: character).count) / 30.0
+            characterImage.animationDuration = Double(cells.count) / 30.0
         }
         
         characterImage.startAnimating()
