@@ -10,6 +10,9 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var characterNameLabel: UILabel!
+    @IBOutlet weak var detailImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
