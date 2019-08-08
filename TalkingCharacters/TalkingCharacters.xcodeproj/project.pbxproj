@@ -14,6 +14,7 @@
 		27FFCD7822FC9EE300BC3ADE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FFCD7722FC9EE300BC3ADE /* TableViewCell.swift */; };
 		27FFCD7A22FC9F3600BC3ADE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FFCD7922FC9F3600BC3ADE /* TableViewController.swift */; };
 		27FFCD7C22FC9F6500BC3ADE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FFCD7B22FC9F6500BC3ADE /* DetailViewController.swift */; };
+		27FFCD7E22FCA8C900BC3ADE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FFCD7D22FCA8C900BC3ADE /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		27FFCD7722FC9EE300BC3ADE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		27FFCD7922FC9F3600BC3ADE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		27FFCD7B22FC9F6500BC3ADE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		27FFCD7D22FCA8C900BC3ADE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				27FFCD7722FC9EE300BC3ADE /* TableViewCell.swift */,
 				27FFCD7922FC9F3600BC3ADE /* TableViewController.swift */,
 				27FFCD7B22FC9F6500BC3ADE /* DetailViewController.swift */,
+				27FFCD7D22FCA8C900BC3ADE /* Model.swift */,
 			);
 			path = TalkingCharacters;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FFCD7E22FCA8C900BC3ADE /* Model.swift in Sources */,
 				27FFCD7822FC9EE300BC3ADE /* TableViewCell.swift in Sources */,
 				27FFCD7A22FC9F3600BC3ADE /* TableViewController.swift in Sources */,
 				27FFCD6222FC9B6700BC3ADE /* AppDelegate.swift in Sources */,

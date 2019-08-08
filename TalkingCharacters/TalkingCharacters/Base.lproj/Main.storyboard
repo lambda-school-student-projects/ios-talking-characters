@@ -39,7 +39,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cellLabelImage" destination="tH0-hH-R5C" id="G76-oK-zr6"/>
-                                    <segue destination="m2d-4h-nQe" kind="show" id="eMz-TS-sao"/>
+                                    <segue destination="m2d-4h-nQe" kind="show" identifier="DetailSegue" id="eMz-TS-sao"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
