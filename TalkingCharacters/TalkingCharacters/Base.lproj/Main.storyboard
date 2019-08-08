@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Characters-->
         <scene sceneID="Uox-4N-Tsk">
             <objects>
                 <tableViewController id="xuo-rU-m9o" customClass="TableViewController" customModule="TalkingCharacters" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="xuo-rU-m9o" id="JFu-zt-VSR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="b4K-a1-kQb"/>
+                    <navigationItem key="navigationItem" title="Characters" id="b4K-a1-kQb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MxQ-kK-rF9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
